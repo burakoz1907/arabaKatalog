@@ -1,10 +1,8 @@
 const card = document.querySelector(".card");
 
 async function urunleriGetir() {
-  // JSON dosyasının doğru yolu
   const response = await fetch("public/assets/json/cars.json");
 
-  // JSON verisini kontrol et
   if (!response.ok) {
     console.error("Dosya yüklenemedi:", response.status);
     return [];
@@ -17,7 +15,6 @@ async function urunleriGetir() {
 async function ekranaYaz() {
   const data = await urunleriGetir();
 
-  // Veriler geldiyse, ekrana yaz
   if (data.length > 0) {
     for (const car of data) {
       card.innerHTML += `
