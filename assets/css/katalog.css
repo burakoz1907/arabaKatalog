@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    margin-inline: auto;
+    max-width: 1440px;
+}
+.navbar-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 100px;
+    position: relative;
+    animation: tazele 2s ease-in-out;
+}
+@keyframes tazele {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.navbar-items{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin-right: 100px;
+}
+.navbar-items li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: soldanKaydir 2s ease-in-out forwards;
+}
+@keyframes soldanKaydir{
+    0%{
+        bottom: -2000px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.cards img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.cards h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.cards .year, .cards .detail {
+    font-size: 16px;
+    color: #666;
+}

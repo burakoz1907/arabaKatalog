@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+
+}
+.container{
+    margin-inline: auto;
+    max-width: 1280px;
+
+}
+.navbar-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 58px;
+    position: relative;
+    animation: tazele 2s ease-in-out;
+}
+.navbar-items{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin-right: 100px;
+}
+.navbar-items li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.icerik-kutu{
+    position: relative;
+    top: 100px;
+    left: 80px;
+    animation: soldanKaydir 1s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+@keyframes tazele{
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes soldanKaydir{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 80px;
+    }
+}
+@keyframes sagdanKaydir{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0;
+    }
+}
+@keyframes soldanKaydirNav{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.text-area{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    & > p{
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+.header{
+    font-size: 50px;
+}
+.read{
+    color: blue;
+}
+.car-box{
+    position: relative;
+    right: 30px;
+    top: 80px;
+    /* background-color: blue; */
+    /* border-radius: 800px; */
+}
+.car-box img{
+    /* animation: sagdanKaydir 1s ease-in-out; */
+    position: relative;
+    width: 600px;
+    object-fit: cover;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+@media (width <= 768px) {
+    .icerik-kutu{
+        grid-template-columns: repeat(1,1fr);
+        left: 100px;
+        top: 50px;
+    }
+    .text-area{
+        max-width: 600px;
+        & > p{
+            text-align: left;
+        }
+    }
+    .car-box img{
+        width: 500px;
+        margin-top: -50px;
+    }
+    .navbar-items{
+        margin-right: 20px;
+    }
+    .navbar-desktop{
+        margin-left: 20px;
+    }
+}
+@media (width <= 478px){
+    .car-box img {
+        width: 300px;
+        top: 20px;
+
+    }
+    .icerik-kutu{
+        left: 40px;
+        top: 0;
+    }
+    @keyframes soldanKaydir {
+        0%{
+            left: -100%;
+        }
+        100%{
+            left: 40px;
+        }
+    }
+    .navbar-items li a{
+        font-size: 15px;
+    }
+    .navbar-desktop{
+
+        & > h1{
+            font-size: 20px;
+        }
+    }
+}
