@@ -46,13 +46,6 @@
       "Detay":"",
       "Sahibi":"Mert Öztürk",
       "images":"assets/img/scrikkoPNG.png"
-    },
-    {
-      "id":"7",
-      "Araba": "Porsche 911",
-      "Model": "2018 " ,
-      "Detay":"",
-      "Sahibi":"Tufan Korkmazel",
-      "images":"assets/img/porsche.jpg"
     }
+    
   ]
